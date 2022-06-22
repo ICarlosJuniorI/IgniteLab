@@ -10,7 +10,10 @@ interface LessonProps {
 }
 
 export function Lesson(props: LessonProps) {
+  //Verifica se a data já passou
   const isLessonAvailable = isPast(props.availableAt);
+
+  //Formata a data para dd/mm/aa em ptBR
   const availableDateFormatted = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm", {
     locale: ptBR
   });

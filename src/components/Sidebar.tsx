@@ -1,6 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import { Lesson } from "./Lesson";
 
+//'SELECT' que retorna as lessons que já estão publicadas ordenando pelo availableAt
 const GET_LESSONS_QUERY = gql`
   query {
   lessons(orderBy: availableAt_ASC, stage: PUBLISHED) {
