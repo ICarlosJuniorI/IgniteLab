@@ -13,6 +13,7 @@ interface LessonProps {
 
 export function Lesson(props: LessonProps) {
   const { slug } = useParams<{ slug: string }>();
+  
   //Verifica se a data já passou
   const isLessonAvailable = isPast(props.availableAt);
 
